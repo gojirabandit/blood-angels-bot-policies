@@ -225,7 +225,7 @@
             <h2><span class="icon">📋</span>Character Cards</h2>
             <p style="color: #bbb; margin-bottom: 20px;">Create and manage your warrior's profile in the Chapter archives.</p>
             <div class="command"><div class="command-name"><code>/create_character_card</code></div><p>Establish your warrior's character card in the Chapter archives. Set your Roblox username, character name, timezone, and optional lore details including a character quote, history, and image.</p></div>
-            <div class="command"><div class="command-name"><code>/view_character_card</code></div><p>View character cards for yourself or another warrior. Displays all statistics, operations, qualifications, commendations, active oaths, penances, and current status.</p></div>
+            <div class="command"><div class="command-name"><code>/view_character_card</code></div><p>View character cards for yourself or another warrior. Displays all statistics, operations, qualifications, commendations, active oaths, penances, active inactivity notices, held relics, and current status.</p></div>
             <div class="command"><div class="command-name"><code>/edit_character_card</code></div><p>Update your character card details via a form. Edit your Roblox username, character name, timezone, quote, or history — supports up to ~1,000 words of lore.</p></div>
             <div class="command"><div class="command-name"><code>/edit_character_image</code></div><p>Update the image displayed on your character card by providing a direct image URL.</p></div>
             <div class="command"><div class="command-name"><code>/archive_character_card</code></div><p>Archive your current character card and start fresh. All data is safely preserved and can be viewed or restored at any time.</p></div>
@@ -241,7 +241,7 @@
             <p style="color: #bbb; margin-bottom: 20px;">Submit and track participation in Chapter operations and battles against Chaos.</p>
             <div class="command"><div class="command-name"><code>/log_operation</code></div><p>Submit an operation for approval. Includes operation name, difficulty, enemy type (Chaos), mission type, a required screenshot, and optional notes. Operations are reviewed before being recorded to your card.</p></div>
             <div class="command"><div class="command-name"><code>/edit_operation</code></div><p>Modify a previously approved operation on your card. Update name, difficulty, enemy type, mission type, notes, or screenshot URL. All edits are logged.</p></div>
-            <div class="command"><div class="command-name"><code>/character_card_leaderboard</code></div><p>View the top 10 warriors ranked by various categories including Total Points, Total Missions, FPD, OPD, Oaths Fulfilled, or Chaos Operations.</p></div>
+            <div class="command"><div class="command-name"><code>/character_card_leaderboard</code></div><p>View the top 10 warriors ranked by various categories including Total Points, Total Missions, FPD, OPD, Oaths of Sanguinius Fulfilled, or Chaos Operations.</p></div>
         </section>
 
         <!-- Section 3: Points System -->
@@ -286,14 +286,14 @@
             <p style="color: #888; margin-top: 15px; font-style: italic;">🩸 You cannot commend yourself. Warriors must have a character card to receive commendations.</p>
         </section>
 
-        <!-- Section 6: Oaths of the Hunt -->
+        <!-- Section 6: Oaths of Sanguinius -->
         <section class="section">
             <span class="section-number">VI</span>
-            <h2><span class="icon">📜</span>Oaths of the Hunt</h2>
-            <p style="color: #bbb; margin-bottom: 20px;">Swear sacred oaths and track their fulfillment.</p>
-            <div class="command"><div class="command-name"><code>/oath_of_the_hunt</code></div><p>Swear a personal Oath of the Hunt before your battle-brothers. Your oath will be displayed on your character card until fulfilled or cancelled. Only one active oath is permitted at a time.</p></div>
-            <div class="command"><div class="command-name"><code>/oath_fulfilled</code><span class="admin-badge">Authorized</span></div><p>Mark a warrior's active oath as fulfilled. Increments their oath fulfillment counter on their character card and permanently records the achievement.</p></div>
-            <p style="color: #888; margin-top: 15px; font-style: italic;">🩸 Oaths can be cancelled via the Cancel button on your character card. All oath activity is logged.</p>
+            <h2><span class="icon">🩸</span>Oaths of Sanguinius</h2>
+            <p style="color: #bbb; margin-bottom: 20px;">Swear sacred oaths in Sanguinius's name and track their fulfillment.</p>
+            <div class="command"><div class="command-name"><code>/oath_of_sanguinius</code></div><p>Swear a personal Oath of Sanguinius before the Chapter. Your oath will be displayed on your character card until fulfilled or cancelled. Only one active oath is permitted at a time.</p></div>
+            <div class="command"><div class="command-name"><code>/oath_fulfilled</code><span class="admin-badge">Authorized</span></div><p>Mark a warrior's active Oath of Sanguinius as fulfilled. Increments their oath fulfillment counter on their character card and permanently records the achievement.</p></div>
+            <p style="color: #888; margin-top: 15px; font-style: italic;">🩸 Oaths can be cancelled via the Cancel Oath of Sanguinius button on your character card. All oath activity is logged.</p>
         </section>
 
         <!-- Section 7: Penances -->
@@ -306,22 +306,46 @@
             <p style="color: #888; margin-top: 15px; font-style: italic;">🩸 All penance assignments and removals are logged to the Penance Log channel.</p>
         </section>
 
-        <!-- Section 8: Sanguinius Commands -->
+        <!-- Section 8: Inactivity System -->
         <section class="section">
             <span class="section-number">VIII</span>
+            <h2><span class="icon">🛌</span>Inactivity System</h2>
+            <p style="color: #bbb; margin-bottom: 20px;">Request, manage, and end inactivity notices with Chapter approval. Active notices are displayed on your character card with a live countdown.</p>
+            <div class="command"><div class="command-name"><code>/request_inactivity</code></div><p>Submit an inactivity notice for Chapter approval. Fill in your Lore Name, Username, Reason, and Time of Leave in days. Once approved, you receive the inactivity role and your character card shows your notice with a countdown to your return date.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_inactivity action: Update</code></div><p>Submit an edit to your active inactivity notice — update your reason or extend/shorten your duration. Requires re-approval. Your current notice stays active while the update is pending.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_inactivity action: End Early</code></div><p>Request to end your inactivity notice before it expires. Requires approval. Shows Chapter leadership how many days you have served and how many remain.</p></div>
+            <p style="color: #888; margin-top: 15px; font-style: italic;">🩸 All inactivity requests and updates are logged to the Inactivity Log channel. Inactivity notices expire automatically and the role is removed when your return date passes.</p>
+        </section>
+
+        <!-- Section 9: Reliquary -->
+        <section class="section">
+            <span class="section-number">IX</span>
+            <h2><span class="icon">🏺</span>Reliquary</h2>
+            <p style="color: #bbb; margin-bottom: 20px;">Track the Chapter's sacred relics and who holds them. Relics assigned to a warrior are displayed on their character card.</p>
+            <div class="command"><div class="command-name"><code>/view_reliquary</code></div><p>View the full Chapter reliquary. Relics are split into two sections — those sitting unassigned in the reliquary, and those currently held by warriors — with names, descriptions, and holder mentions.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_reliquary action: Add Relic</code><span class="admin-badge">Authorized</span></div><p>Add a new relic to the reliquary with a name and optional lore description.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_reliquary action: Edit Relic</code><span class="admin-badge">Authorized</span></div><p>Edit an existing relic's name or description. Select from a dropdown of all current relics.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_reliquary action: Remove Relic</code><span class="admin-badge">Authorized</span></div><p>Permanently remove a relic from the reliquary. Works on both assigned and unassigned relics.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_reliquary action: Assign Relic</code><span class="admin-badge">Authorized</span></div><p>Assign an unassigned relic to a warrior. Only unassigned relics appear in the selection dropdown. The target warrior must have a character card.</p></div>
+            <div class="command"><div class="command-name"><code>/manage_reliquary action: Unassign Relic</code><span class="admin-badge">Authorized</span></div><p>Return a relic from a warrior back to the reliquary. Optionally filter by specifying a warrior to see only their relics.</p></div>
+        </section>
+
+        <!-- Section 10: Sanguinius Commands -->
+        <section class="section">
+            <span class="section-number">X</span>
             <h2><span class="icon">🩸</span>Sanguinius Commands</h2>
             <p style="color: #bbb; margin-bottom: 20px;">Commands that channel the wisdom and authority of the Great Angel himself.</p>
             <div class="command"><div class="command-name"><code>/sanguinius_wisdom</code></div><p>Receive wisdom from Sanguinius. The Great Angel shares guidance drawn from ten millennia of war and sacrifice. <em>(30 unique quotes)</em></p></div>
             <div class="command"><div class="command-name"><code>/for_sanguinius</code></div><p>Declare your loyalty publicly before your battle-brothers. A rallying cry for the Sons of Baal. <em>(4 response variations)</em></p></div>
             <div class="command"><div class="command-name"><code>/sanguinius_blessing</code></div><p>Receive Sanguinius's personal blessing before heading into battle. <em>(20 unique blessings)</em></p></div>
-            <div class="command"><div class="command-name"><code>/sanguinius_address</code></div><p>Hear Sanguinius address the Chapter directly — stirring speeches drawing on sacrifice, the Black Rage, and the burden of the Blood Angels. <em>(7 unique addresses)</em></p></div>
+            <div class="command"><div class="command-name"><code>/sanguinius_address</code></div><p>Hear Sanguinius address the Chapter directly, with speeches drawing on sacrifice, the Black Rage, and the burden of the Blood Angels. <em>(7 unique addresses)</em></p></div>
             <div class="command"><div class="command-name"><code>/blood_angels_prayer</code></div><p>Sanguinius leads the Chapter in a prayer before battle. Includes a call-and-response from the assembled warriors. <em>(10 unique prayers)</em></p></div>
             <div class="command"><div class="command-name"><code>/blood_angels_quote</code></div><p>Receive a quote drawn from Blood Angels lore and tradition. <em>(30 unique quotes)</em></p></div>
         </section>
 
-        <!-- Section 9: Stats Tracked -->
+        <!-- Section 11: Stats Tracked -->
         <section class="section">
-            <span class="section-number">IX</span>
+            <span class="section-number">XI</span>
             <h2><span class="icon">📊</span>Stats Tracked</h2>
             <div class="stats-grid">
                 <div class="stats-category">
@@ -343,19 +367,21 @@
                     <h3>Other</h3>
                     <ul>
                         <li>Total Points</li>
-                        <li>Qualifications</li>
+                        <li>Qualifications (9 courses)</li>
                         <li>Commendations</li>
-                        <li>Oaths Fulfilled</li>
+                        <li>Oaths of Sanguinius Fulfilled</li>
                         <li>Penances (Past &amp; Active)</li>
+                        <li>Relics Held</li>
+                        <li>Active Inactivity Notice</li>
                         <li>Archived Cards</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Section 10: Auto-Logging -->
+        <!-- Section 12: Auto-Logging -->
         <section class="section">
-            <span class="section-number">X</span>
+            <span class="section-number">XII</span>
             <h2><span class="icon">📝</span>Auto-Logging</h2>
             <p style="color: #bbb; margin-bottom: 20px;">All important actions are automatically logged to dedicated channels:</p>
             <ul class="info-list">
@@ -364,12 +390,13 @@
                 <li>Qualification changes → Qualification Log</li>
                 <li>Penance assignments &amp; removals → Penance Log</li>
                 <li>Oath fulfillment &amp; cancellations → Oath Log</li>
+                <li>Inactivity requests, updates &amp; early ends → Inactivity Log</li>
             </ul>
         </section>
 
-        <!-- Section 11: Features -->
+        <!-- Section 13: Features -->
         <section class="section">
-            <span class="section-number">XI</span>
+            <span class="section-number">XIII</span>
             <h2><span class="icon">✨</span>Features</h2>
             <div class="features-grid">
                 <div class="feature-item"><span class="icon">✅</span>Approval System with Accept/Decline</div>
@@ -377,9 +404,11 @@
                 <div class="feature-item"><span class="icon">🚫</span>Duplicate Prevention</div>
                 <div class="feature-item"><span class="icon">💾</span>GitHub Storage with Auto-Sharding</div>
                 <div class="feature-item"><span class="icon">🎨</span>Color-Coded Cards</div>
-                <div class="feature-item"><span class="icon">⏰</span>Dynamic Timestamps</div>
+                <div class="feature-item"><span class="icon">⏰</span>Dynamic Timestamps &amp; Countdowns</div>
                 <div class="feature-item"><span class="icon">📦</span>Card Archive &amp; Restore System</div>
                 <div class="feature-item"><span class="icon">📬</span>DM Relay to Staff Channel</div>
+                <div class="feature-item"><span class="icon">🛌</span>Inactivity Tracking with Auto-Expiry</div>
+                <div class="feature-item"><span class="icon">🏺</span>Chapter Reliquary System</div>
             </div>
             <p style="color: #888; margin-top: 20px; text-align: center; font-style: italic;">
                 Character cards display in <span style="color: #9B0000;">Blood Angels Red</span> normally,
@@ -387,7 +416,7 @@
             </p>
         </section>
 
-        <div class="credit-box">
+                <div class="credit-box">
             <p class="credit-label">Bot Created By</p>
             <p class="credit-name">GojiraBandit</p>
             <p class="credit-desc">Engineered for the Angels Imperialis Blood Angels</p>
