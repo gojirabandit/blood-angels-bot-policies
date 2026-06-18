@@ -210,7 +210,7 @@
             <span class="section-number">V</span>
             <h2><span class="icon">🎓</span>Qualifications</h2>
             <div class="command"><div class="command-name"><code>/manage_qualifications add/remove</code><span class="admin-badge">Authorized</span></div><p>Award or remove qualifications from a warrior's card. Requires the appropriate authorization role.</p></div>
-            <p style="color:#999;margin-top:18px;"><strong style="color:var(--gold);">9 Available Courses:</strong></p>
+            <p style="color:#999;margin-top:18px;"><strong style="color:var(--gold);">11 Available Courses:</strong></p>
             <ul class="info-list">
                 <li>NCO Leadership Course</li>
                 <li>Vox-Castor Course</li>
@@ -221,6 +221,8 @@
                 <li>Advanced Tactics Course</li>
                 <li>Command and Leadership Course</li>
                 <li>Heavy Weapons Course</li>
+                <li>Trial of Blood</li>
+                <li>Introductory Training</li>
             </ul>
         </section>
 
@@ -228,7 +230,7 @@
         <section class="section">
             <span class="section-number">VI</span>
             <h2><span class="icon">⭐</span>Commendations</h2>
-            <div class="command"><div class="command-name"><code>/commend_warrior</code></div><p>Award a commendation to a fellow warrior for exceptional service. A 24-hour cooldown applies per recipient. You cannot commend yourself.</p></div>
+            <div class="command"><div class="command-name"><code>/commend_warrior</code></div><p>Award a commendation to a fellow warrior for exceptional service. A 12-hour cooldown applies per recipient — you can commend other warriors freely, just not the same person twice within 12 hours. You cannot commend yourself.</p></div>
         </section>
 
         <!-- VII: Oaths of Sanguinius -->
@@ -307,6 +309,7 @@
             <div class="command"><div class="command-name"><code>/sanguinius_address</code></div><p>Hear Sanguinius address the Chapter directly. 50 unique addresses on sacrifice, the Black Rage, and the burden of the Blood Angels.</p></div>
             <div class="command"><div class="command-name"><code>/blood_angels_prayer</code></div><p>Sanguinius leads the Chapter in a prayer before battle with call-and-response. 50 unique prayers.</p></div>
             <div class="command"><div class="command-name"><code>/blood_angels_quote</code></div><p>Receive a quote from Blood Angels lore and tradition. 50 unique quotes.</p></div>
+            <div class="command"><div class="command-name"><code>/dice max:[number]</code></div><p>Roll a dice up to your chosen maximum. Usable by anyone — enter any number from 2 to 1,000,000.</p></div>
         </section>
 
         <!-- XIV: Stats Tracked -->
@@ -383,6 +386,106 @@
                 <div class="feature-item"><span class="icon">💀</span>KIA &amp; Void System</div>
                 <div class="feature-item"><span class="icon">🏅</span>Awards &amp; Role Tracking</div>
             </div>
+        </section>
+
+
+        <!-- XVII: Blood Angels RPG -->
+        <section class="section" style="border-color:rgba(201,162,39,0.4);">
+            <span class="section-number" style="background:linear-gradient(135deg,#6b0000,#3a0000);">XVII</span>
+            <h2><span class="icon">⚔️</span>Blood Angels RPG</h2>
+            <p style="color:#bbb;margin-bottom:24px;font-size:1.05rem;">A full standalone RPG economy system themed around Blood Angels lore. Fight Orks and Black Legion, earn Requisition Points, collect gear, run dungeons with your squad, and gamble your earnings. Completely separate from your character card — anyone can play.</p>
+
+            <!-- Standing Tiers -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:24px 0 12px;">Chapter Standing — Progression Tiers</h3>
+            <p style="color:#999;margin-bottom:14px;font-size:0.95rem;">Your Standing tier is determined by your level. Higher tiers unlock dungeons, increase RP and XP multipliers, and raise your gambling cap.</p>
+            <div class="points-grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
+                <div class="points-item"><span class="difficulty">Neophyte</span><span class="value" style="font-size:0.9rem;">Lv 1+</span></div>
+                <div class="points-item"><span class="difficulty">Scout</span><span class="value" style="font-size:0.9rem;">Lv 5+</span></div>
+                <div class="points-item"><span class="difficulty">Battle-Brother</span><span class="value" style="font-size:0.9rem;">Lv 10+</span></div>
+                <div class="points-item"><span class="difficulty">Veteran</span><span class="value" style="font-size:0.9rem;">Lv 18+</span></div>
+                <div class="points-item"><span class="difficulty">Sergeant</span><span class="value" style="font-size:0.9rem;">Lv 28+</span></div>
+                <div class="points-item"><span class="difficulty">Lieutenant</span><span class="value" style="font-size:0.9rem;">Lv 38+</span></div>
+                <div class="points-item"><span class="difficulty">Captain</span><span class="value" style="font-size:0.9rem;">Lv 46+</span></div>
+                <div class="points-item"><span class="difficulty">Chapter Master</span><span class="value" style="font-size:0.9rem;">Lv 50</span></div>
+            </div>
+
+            <!-- Core Commands -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Core Commands</h3>
+            <div class="command"><div class="command-name"><code>/rpg_profile</code></div><p>View your full RPG profile — level, Battle Rating, wallet, bank, Honour Tokens, equipped gear, and stats. View other warriors' profiles by mentioning them.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_hunt</code></div><p>Hunt Orks or Black Legion forces. A random enemy appropriate to your level is selected — the higher your level the tougher the enemies you face. Win for RP, XP, materials, and gear drops. 30-minute cooldown.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_patrol</code></div><p>A safer alternative to hunting. Guaranteed small RP and XP with no combat risk. 15-minute cooldown.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_daily</code></div><p>Claim your daily Requisition Points reward. Builds a streak — every 3 days awards bonus materials, every 7 days awards 1 Honour Token.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_train</code></div><p>Spend RP to train in the cages and gain XP. Cost scales with your level. 1-hour cooldown.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_cooldowns</code></div><p>Check the remaining cooldown on all your RPG commands at a glance.</p></div>
+
+            <!-- Economy -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Economy & Combat</h3>
+            <div class="command"><div class="command-name"><code>/rpg_bank deposit/withdraw/balance</code></div><p>Your bank keeps RP completely safe from robbery. Only your wallet RP can be stolen or gambled. Deposit to protect your earnings.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_rob</code></div><p>Attempt to steal up to 25% of another warrior's wallet RP. Success depends on your BR vs theirs. Fail and you lose 10% of your own wallet. 1-hour cooldown. Cannot target warriors with less than 500 RP in their wallet.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_duel</code></div><p>Challenge a warrior to a PvP wager duel. Set a bet — winner takes the pot. BR plus a random roll decides the outcome. Losing costs you real RP. 30-minute cooldown.</p></div>
+
+            <!-- Dungeons -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Dungeons</h3>
+            <p style="color:#999;margin-bottom:14px;font-size:0.95rem;">Dungeons are the highest-reward activity. Start a run solo or invite up to 4 others to your party using the Join button. Party leader starts the fight. Requires minimum Battle Rating and Chapter Standing. 12-hour cooldown.</p>
+            <div class="stats-grid">
+                <div class="stats-category">
+                    <h3>Tier I — Ork Warboss</h3>
+                    <ul><li>Min Level: 1 | Min BR: 0</li><li>Reward: 450–750 RP + 2 HT</li><li>Available from: Neophyte</li></ul>
+                </div>
+                <div class="stats-category">
+                    <h3>Tier II — Chaos Champion</h3>
+                    <ul><li>Min Level: 5 | Min BR: 55</li><li>Reward: 900–1,500 RP + 4 HT</li><li>Available from: Scout</li></ul>
+                </div>
+                <div class="stats-category">
+                    <h3>Tier III — Daemon Prince</h3>
+                    <ul><li>Min Level: 10 | Min BR: 130</li><li>Reward: 2,000–3,000 RP + 8 HT</li><li>Available from: Battle-Brother</li></ul>
+                </div>
+                <div class="stats-category">
+                    <h3>Tier IV — Chaos Titan</h3>
+                    <ul><li>Min Level: 18 | Min BR: 280</li><li>Reward: 4,500–6,500 RP + 16 HT</li><li>Available from: Veteran</li></ul>
+                </div>
+                <div class="stats-category">
+                    <h3>Tier V — Daemon Primarch</h3>
+                    <ul><li>Min Level: 28 | Min BR: 520</li><li>Reward: 10,000–15,000 RP + 30 HT</li><li>Available from: Sergeant</li></ul>
+                </div>
+                <div class="stats-category">
+                    <h3>Tier VI — The Warmaster</h3>
+                    <ul><li>Min Level: 38 | Min BR: 850</li><li>Reward: 20,000–30,000 RP + 60 HT</li><li>Available from: Lieutenant</li></ul>
+                </div>
+            </div>
+
+            <!-- Gear -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Gear System</h3>
+            <p style="color:#999;margin-bottom:14px;font-size:0.95rem;">Gear comes in five rarities and determines your Battle Rating alongside your level. Buy from the shop, find from hunt drops, or craft from materials. Honour Token gear is the most powerful and can only be bought with HT earned from dungeons.</p>
+            <div class="points-grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+                <div class="points-item"><span class="difficulty">⚪ Common</span><span class="value" style="font-size:0.9rem;">RP Shop</span></div>
+                <div class="points-item"><span class="difficulty">🟢 Uncommon</span><span class="value" style="font-size:0.9rem;">RP Shop / Drop</span></div>
+                <div class="points-item"><span class="difficulty">🔵 Rare</span><span class="value" style="font-size:0.9rem;">Shop / Drop / Craft</span></div>
+                <div class="points-item"><span class="difficulty">🟣 Relic</span><span class="value" style="font-size:0.9rem;">HT / Craft / Drop</span></div>
+                <div class="points-item"><span class="difficulty">🟠 Legendary</span><span class="value" style="font-size:0.9rem;">HT / Craft only</span></div>
+            </div>
+            <div class="command" style="margin-top:16px;"><div class="command-name"><code>/rpg_shop</code></div><p>Browse the Armoury by category: Weapons, Armour, Consumables, or the Honour Vault. Items locked above your Chapter Standing tier are hidden.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_buy [item id]</code></div><p>Purchase an item. Use the item ID shown in the shop. RP items deduct from wallet; HT items deduct Honour Tokens.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_equip [item id]</code></div><p>Equip a weapon or armour from your inventory. Equipped gear directly raises your Battle Rating.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_inventory</code></div><p>View all weapons, armour, materials, and consumables you own.</p></div>
+
+            <!-- Crafting -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Crafting</h3>
+            <p style="color:#999;margin-bottom:14px;font-size:0.95rem;">Materials drop passively from hunts — Ceramite and Promethium are common, Adamantium is uncommon, Warp Residue is rare, and Void Crystals only drop at Tier 4+. Combine them to craft powerful gear.</p>
+            <div class="command"><div class="command-name"><code>/rpg_craft [item id]</code></div><p>Craft an item if you have the required materials. Crafted items go straight into your inventory.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_recipes</code></div><p>View all craftable items with their material costs. Locked recipes show what Chapter Standing tier is required.</p></div>
+
+            <!-- Gambling -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Gambling</h3>
+            <p style="color:#999;margin-bottom:14px;font-size:0.95rem;">All gambling uses your wallet RP only — banked RP is always safe. Your Chapter Standing determines your maximum bet. All games are fair random outcomes.</p>
+            <div class="command"><div class="command-name"><code>/rpg_blackjack [bet]</code></div><p>Standard blackjack against the house. Stand on 17+. Win doubles your bet, bust or lose costs it. Ties push.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_coinflip [bet] [heads/tails]</code></div><p>50/50 — call heads or tails. Win doubles your bet.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_slots [bet]</code></div><p>Themed slot machine with 7 Blood Angels symbols. Three matching symbols pays out from ×3 up to ×12 for a triple Honour Medal jackpot. Two matching pays ×1.5.</p></div>
+            <div class="command"><div class="command-name"><code>/rpg_roulette [bet] [choice]</code></div><p>Bet on red/black/green, odd/even, a dozen (1-12, 13-24, 25-36), or a specific number 0-36. Colour and odd/even pay ×2, dozens pay ×3, single numbers pay ×36.</p></div>
+
+            <!-- Leaderboard -->
+            <h3 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin:28px 0 12px;">Leaderboard</h3>
+            <div class="command"><div class="command-name"><code>/rpg_leaderboard</code></div><p>View the top 10 warriors in 6 categories: Battle Rating, Level, Total RP (wallet + bank), Dungeon Runs, Total Kills, and Duel Wins.</p></div>
         </section>
 
         <div class="credit-box">
